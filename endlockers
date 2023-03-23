@@ -1,0 +1,16 @@
+game:GetService("Players").LocalPlayer:Kick("Outdated Script - join discord.gg/antilock")
+syn.request({
+   Url = "http://127.0.0.1:6463/rpc?v=1",
+   Method = "POST",
+   Headers = {
+       ["Content-Type"] = "application/json",
+       ["Origin"] = "https://discord.com"
+   },
+   Body = game:GetService("HttpService"):JSONEncode({
+       cmd = "INVITE_BROWSER",
+       args = {
+           code = "HXwgqWDUfc"
+       },
+       nonce = game:GetService("HttpService"):GenerateGUID(false)
+   }),
+})
